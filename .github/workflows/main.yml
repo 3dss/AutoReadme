@@ -35,8 +35,8 @@ jobs:
           REPO_OWNER: ${{ github.event.repository.owner.login }}
           REPO_CREATED_AT: ${{ github.event.repository.created_at }}
         run: |
-          python generate_readme.py
           python AutoReadme/generate_readme.py
+          python generate_readme.py
 
       - name: Commit and push README.md
         run: |

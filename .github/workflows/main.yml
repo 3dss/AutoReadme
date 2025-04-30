@@ -17,7 +17,6 @@ jobs:
 
       - name: Download template and script from shared repo
         run: |
-          pwd
           curl -O https://raw.githubusercontent.com/3dss/AutoReadme/main/readme_template.j2
           curl -O https://raw.githubusercontent.com/3dss/AutoReadme/main/generate_readme.py
 
@@ -36,8 +35,8 @@ jobs:
           REPO_OWNER: ${{ github.event.repository.owner.login }}
           REPO_CREATED_AT: ${{ github.event.repository.created_at }}
         run: |
-          pwd
           python generate_readme.py
+          python AutoReadme/generate_readme.py
 
       - name: Commit and push README.md
         run: |

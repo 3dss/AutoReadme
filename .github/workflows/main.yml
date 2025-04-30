@@ -17,8 +17,8 @@ jobs:
 
       - name: Download template and script from shared repo
         run: |
-          curl -O https://raw.githubusercontent.com/YOUR_ORG/readme-template-generator/main/readme_template.j2
-          curl -O https://raw.githubusercontent.com/YOUR_ORG/readme-template-generator/main/generate_readme.py
+          curl -O https://raw.githubusercontent.com/3dss/AutoReadme/main/readme_template.j2
+          curl -O https://raw.githubusercontent.com/3dss/AutoReadme/main/generate_readme.py
 
       - name: Set up Python
         uses: actions/setup-python@v5
